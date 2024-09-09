@@ -25,3 +25,16 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - "%kernel.project_dir%/themes"
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                model: App\Entity\Product\Product
+
+sylius_resource:
+    resources:
+        sylius.manufacturer:
+            driver: doctrine/orm
+            classes:
+                model: App\Entity\Manufacturer\Manufacturer
