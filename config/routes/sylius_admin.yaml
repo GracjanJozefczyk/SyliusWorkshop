@@ -5,3 +5,19 @@ sylius_admin:
 sylius_paypal_admin:
     resource: "@SyliusPayPalPlugin/Resources/config/admin_routing.yml"
     prefix: '/%sylius_admin.path_name%'
+    
+sylius_manufacturer_admin:
+    resource: |
+        alias: sylius.manufacturer
+        section: admin
+        path: admin/manufacturers
+        templates: "@SyliusAdmin\\Crud"
+        redirect: update
+        grid: sylius_admin_manufacturer
+        vars:
+            all:
+                header: sylius.ui.manufacturers
+                subheader: sylius.ui.manage_manufacturers
+            index:
+                icon: 'tag'
+    type: sylius.resource
