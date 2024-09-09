@@ -1,0 +1,5 @@
+services:
+    app.admin.menu_builder:
+        class: App\Admin\MenuBuilder
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main }

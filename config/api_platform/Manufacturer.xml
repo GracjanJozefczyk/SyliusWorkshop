@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<resources xmlns="https://api-platform.com/schema/metadata"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
+>
+    <resource class="App\Entity\Manufacturer\Manufacturer" shortName="Manufacturer">
+        <attribute name="validation_groups">sylius</attribute>
+
+        <collectionOperations>
+            <collectionOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/manufacturers</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:manufacturers:read</attribute>
+                </attribute>
+            </collectionOperation>
+            <collectionOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/manufacturers</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:manufacturers:read</attribute>
+                </attribute>
+            </collectionOperation>
+            <collectionOperation name="admin_post">
+                <attribute name="method">POST</attribute>
+                <attribute name="path">/admin/manufacturers</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:manufacturer:create</attribute>
+                </attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/manufacturers/{id}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:manufacturer:read</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/manufacturers/{id}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:manufacturer:read</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_delete">
+                <attribute name="method">DELETE</attribute>
+                <attribute name="path">/admin/manufacturers/{id}</attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_put">
+                <attribute name="method">PUT</attribute>
+                <attribute name="path">/admin/manufacturers/{id}</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:manufacturer:update</attribute>
+                </attribute>
+                <attribute name="validation_groups">
+                    <attribute>sylius</attribute>
+                </attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <property name="id" identifier="true" writable="false" />
+        <property name="name" writable="true" />
+        <property name="code" writable="true" />
+    </resource>
+</resources>

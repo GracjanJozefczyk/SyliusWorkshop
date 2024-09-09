@@ -25,3 +25,48 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - "%kernel.project_dir%/themes"
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                model: App\Entity\Product\Product
+
+sylius_resource:
+    resources:
+        sylius.manufacturer:
+            driver: doctrine/orm
+            classes:
+                model: App\Entity\Manufacturer\Manufacturer
+
+sylius_grid:
+    grids:
+        sylius_admin_manufacturer:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.manufacturer.class%"
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+                code:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [name, code]
+            actions:
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                main:
+                    create:
+                        type: create

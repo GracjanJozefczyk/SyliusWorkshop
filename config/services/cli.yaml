@@ -1,0 +1,9 @@
+services:
+    app.cli.test_command:
+        class: App\Cli\TestCommand
+        arguments:
+            - '@sylius.repository.manufacturer'
+            - '@sylius.factory.manufacturer'
+            - '@sylius.manager.manufacturer'
+        tags:
+            - { name: 'console.command' }
