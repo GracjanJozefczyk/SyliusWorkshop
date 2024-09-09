@@ -11,7 +11,7 @@ composer-install:
 rdb:
 	@docker-compose exec app sh -c 'if bin/console doctrine:query:sql "SELECT 1" > /dev/null 2>&1; then bin/console doctrine:database:drop --force; fi'
 	@docker-compose exec app bin/console doctrine:database:create
-	@docker-compose exec app bin/console doctrine:schema:create
+	@docker-compose exec app bin/console doctrine:migrations:migrate -n
 	@docker-compose exec app bin/console sylius:fixtures:load -n
 
 frontend:
