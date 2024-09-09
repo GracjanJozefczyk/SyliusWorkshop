@@ -14,6 +14,9 @@ sylius_manufacturer_admin:
         templates: "@SyliusAdmin\\Crud"
         redirect: update
         grid: sylius_admin_manufacturer
+        form:
+            options:
+                validation_groups: [sylius]
         vars:
             all:
                 header: sylius.ui.manufacturers
