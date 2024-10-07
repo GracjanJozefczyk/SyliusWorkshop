@@ -1,3 +1,8 @@
+app:
+    form:
+        product:
+            manufacturer: Manufacturer
+            select_manufacturer: Select manufacturer
 sylius:
     ui:
         manufacturers: Manufacturers
