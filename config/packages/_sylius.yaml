@@ -31,6 +31,7 @@ sylius_product:
         product:
             classes:
                 model: App\Entity\Product\Product
+                repository: App\Repository\ProductRepository
 
 sylius_resource:
     resources:
@@ -38,6 +39,7 @@ sylius_resource:
             driver: doctrine/orm
             classes:
                 model: App\Entity\Manufacturer\Manufacturer
+                repository: App\Repository\ManufacturerRepository
 
 sylius_grid:
     grids:
