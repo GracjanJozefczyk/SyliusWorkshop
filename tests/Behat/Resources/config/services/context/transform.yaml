@@ -1,0 +1,6 @@
+services:
+    app.test.behat.context.transform.manufacturer:
+        public: true
+        class: App\Tests\Behat\Context\Transform\ManufacturerContext
+        arguments:
+            - '@sylius.repository.manufacturer'

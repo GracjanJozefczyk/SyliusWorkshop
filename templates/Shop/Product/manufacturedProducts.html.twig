@@ -1,0 +1,11 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+    <div class="ui segment">
+        <div class="ui three cards">
+            {% for product in products %}
+                {% include '@SyliusShop/Product/_box.html.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

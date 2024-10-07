@@ -1,0 +1,5 @@
+services:
+    app.test.behat.page.shop.product.index:
+        public: true
+        class: App\Tests\Behat\Page\Shop\Product\IndexPage
+        parent: sylius.behat.symfony_page

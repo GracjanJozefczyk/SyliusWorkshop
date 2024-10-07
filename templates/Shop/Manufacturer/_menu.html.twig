@@ -1,0 +1,9 @@
+<div class="ui dropdown item">
+    <span class="text">{{ 'sylius.ui.manufacturers'|trans }}</span>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+        {% for manufacturer in manufacturers %}
+            <a href="{{ path('sylius_shop_manufactured_products_index', {'code': manufacturer.code}) }}" class="item">{{ manufacturer.name }}</a>
+        {% endfor %}
+    </div>
+</div>

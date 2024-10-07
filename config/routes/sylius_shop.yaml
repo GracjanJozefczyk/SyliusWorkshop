@@ -27,3 +27,23 @@ sylius_shop_request_password_reset_token_redirect:
     defaults:
         route: sylius_shop_request_password_reset_token
         permanent: false
+
+sylius_shop_partial_manufacturers_index:
+    path: /{_locale}/_partial/manufacturers
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.manufacturer::indexAction
+        _sylius:
+            template: "Shop/Manufacturer/_menu.html.twig"
+            
+sylius_shop_manufactured_products_index:
+    path: /{_locale}/manufactured-products/{code}
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product::indexAction
+        _sylius:
+            template: "Shop/Product/manufacturedProducts.html.twig"
+            repository:
+                method: findByManufacturer
+                arguments:
+                    - expr:service('sylius.repository.manufacturer').findOneByCode($code)

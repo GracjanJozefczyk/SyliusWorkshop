@@ -1,0 +1,2 @@
+imports:
+    - suites/product/viewing_products.yaml

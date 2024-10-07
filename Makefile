@@ -20,3 +20,6 @@ frontend:
 
 php-shell:
 	@docker-compose exec app sh
+
+behat:
+	@docker-compose exec -e APP_ENV=test -e APP_DEBUG=0 app vendor/bin/behat
