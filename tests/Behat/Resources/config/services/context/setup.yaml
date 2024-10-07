@@ -1,0 +1,12 @@
+services:
+    app.test.behat.context.setup.manufacturer:
+        public: true
+        class: App\Tests\Behat\Context\Setup\ManufacturerContext
+        arguments:
+            - '@sylius.factory.manufacturer'
+            - '@sylius.manager.manufacturer'
+    app.test.behat.context.setup.product_manufacturer:
+        public: true
+        class: App\Tests\Behat\Context\Setup\ProductManufacturerContext
+        arguments:
+            - '@sylius.manager.product'

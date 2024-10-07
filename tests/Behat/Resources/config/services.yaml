@@ -1,0 +1,5 @@
+imports:
+    - { resource: "services/context/setup.yaml" }
+    - { resource: "services/context/transform.yaml" }
+    - { resource: "services/context/ui.yaml" }
+    - { resource: "services/page/shop.yaml" }

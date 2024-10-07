@@ -1,0 +1,6 @@
+services:
+    app.test.behat.context.ui.manufacturer:
+        public: true
+        class: App\Tests\Behat\Context\Ui\ProductContext
+        arguments:
+            - '@app.test.behat.page.shop.product.index'
