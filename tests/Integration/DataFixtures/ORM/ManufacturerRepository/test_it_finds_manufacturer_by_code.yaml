@@ -1,0 +1,4 @@
+App\Entity\Manufacturer\Manufacturer:
+    manufacturer_1:
+        code: manufacturer_1
+        name: Manufacturer 1
