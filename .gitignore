@@ -36,7 +36,9 @@
 
 ###> phpunit/phpunit ###
 /.phpunit.result.cache
+/.phpunit.cache
 /phpunit.xml
+/coverage
 ###< phpunit/phpunit ###
 
 ###> lexik/jwt-authentication-bundle ###

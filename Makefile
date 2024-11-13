@@ -23,3 +23,6 @@ php-shell:
 
 behat:
 	@docker-compose exec -e APP_ENV=test -e APP_DEBUG=0 app vendor/bin/behat
+
+php-unit:
+	@docker-compose exec -e XDEBUG_MODE=coverage -e APP_ENV=test -e APP_DEBUG=0 app vendor/bin/phpunit --coverage-html coverage/
