@@ -1,0 +1,36 @@
+Sylius\Component\Addressing\Model\Country:
+    poland:
+        code: 'PL'
+Sylius\Component\Addressing\Model\Zone:
+    pl:
+        code: 'PL'
+        name: 'Poland'
+        type: 'country'
+        scope: 'all'
+Sylius\Component\Addressing\Model\ZoneMember:
+    zone_member_pl:
+        code: 'PL'
+        belongsTo: '@pl'
+Sylius\Component\Currency\Model\Currency:
+    pln:
+        code: 'PLN'
+Sylius\Component\Locale\Model\Locale:
+    locale:
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        code: 'pl'
+Sylius\Component\Core\Model\Channel:
+    channel:
+        code: "CODE"
+        name: "name"
+        defaultLocale: '@locale'
+        locales: [ '@locale' ]
+        taxCalculationStrategy: 'order_items_based'
+        baseCurrency: '@pln'
+        enabled: true
+App\Entity\Manufacturer\Manufacturer:
+    manufacturer_1:
+        code: manufacturer_1
+        name: Manufacturer 1
+    manufacturer_2:
+        code: manufacturer_2
+        name: Manufacturer 2

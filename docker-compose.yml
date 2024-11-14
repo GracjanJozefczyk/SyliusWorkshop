@@ -3,6 +3,8 @@ services:
         container_name: app
         build:
             context: .
+            args:
+              X_DEBUG_ENABLED: ${X_DEBUG_ENABLED}
         environment:
             APP_ENV: "dev"
             DATABASE_URL: "mysql://root:mysql@mysql/sylius_%kernel.environment%?charset=utf8mb4"

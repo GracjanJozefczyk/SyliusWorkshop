@@ -3,6 +3,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG PHP_VERSION=8.1
 ENV LC_ALL=C.UTF-8
 
+ARG X_DEBUG_ENABLED=false
+ENV X_DEBUG_ENABLED=${X_DEBUG_ENABLED}
+
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     curl \
@@ -49,6 +52,13 @@ RUN apt-get remove --purge -y software-properties-common curl && apt-get clean &
 RUN ln -s /usr/sbin/php-fpm${PHP_VERSION} /usr/sbin/php-fpm && mkdir -p /run/php
 
 RUN npm install -g yarn && npm cache clean --force
+
+RUN if [ "$X_DEBUG_ENABLED" = "true" ] ; then \
+    apt-get update && \
+    apt-get install -y --no-install-recommends php${PHP_VERSION}-xdebug && \
+    phpenmod xdebug && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*; \
+fi
 
 COPY .docker/supervisord.conf   /etc/supervisor/conf.d/supervisor.conf
 COPY .docker/nginx.conf         /etc/nginx/nginx.conf
