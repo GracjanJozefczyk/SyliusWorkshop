@@ -1,0 +1,19 @@
+services:
+    app.importer.provider.data_provider:
+        class: App\Importer\Provider\DataProvider
+        arguments:
+            - '@sylius.import'
+            - '@serializer'
+
+    app.importer.provider.manufacturer:
+        class: App\Importer\Provider\ManufacturerProvider
+        arguments:
+            - '@sylius.repository.manufacturer'
+            - '@sylius.factory.manufacturer'
+    
+    app.importer.manufacturer_importer:
+        class: App\Importer\ManufacturerImporter
+        arguments:
+            - '@app.importer.provider.data_provider'
+            - '@app.importer.provider.manufacturer'
+            - '@sylius.manager.manufacturer'

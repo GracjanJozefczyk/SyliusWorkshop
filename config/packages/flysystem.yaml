@@ -1,7 +1,14 @@
+parameters:
+    sylius.import_dir: "%kernel.project_dir%/private/import"
 flysystem:
     storages:
         sylius.storage:
             adapter: 'local'
             options:
                 directory: '%sylius_core.images_dir%'
+            directory_visibility: 'public'
+        sylius.import:
+            adapter: 'local'
+            options:
+                directory: '%sylius.import_dir%'
             directory_visibility: 'public'
