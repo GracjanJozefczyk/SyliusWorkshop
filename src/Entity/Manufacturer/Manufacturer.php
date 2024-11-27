@@ -7,6 +7,7 @@ namespace App\Entity\Manufacturer;
 use App\Entity\Product\ProductInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Sylius\Component\Channel\Model\ChannelInterface;
 use Sylius\Resource\Model\TimestampableTrait;
 
 class Manufacturer implements ManufacturerInterface
@@ -21,9 +22,12 @@ class Manufacturer implements ManufacturerInterface
 
     private Collection $products;
 
+    private Collection $channels;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
+        $this->channels = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -75,5 +79,29 @@ class Manufacturer implements ManufacturerInterface
     public function hasProduct(ProductInterface $product): bool
     {
         return $this->products->contains($product);
+    }
+
+    public function getChannels(): Collection
+    {
+        return $this->channels;
+    }
+
+    public function addChannel(ChannelInterface $channel): void
+    {
+        if (!$this->hasChannel($channel)) {
+            $this->channels->add($channel);
+        }
+    }
+
+    public function removeChannel(ChannelInterface $channel): void
+    {
+        if ($this->hasChannel($channel)) {
+            $this->channels->removeElement($channel);
+        }
+    }
+
+    public function hasChannel(ChannelInterface $channel): bool
+    {
+        return $this->channels->contains($channel);
     }
 }
