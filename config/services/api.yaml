@@ -1,0 +1,7 @@
+services:
+    app.api.doctrine.query_collection_extension.manufacturer_by_channel_extension:
+        class: App\Api\Doctrine\QueryCollectionExtension\ManufacturersByChannelExtension
+        arguments:
+            - '@Sylius\Bundle\ApiBundle\Context\UserContextInterface'
+        tags:
+            - { name: api_platform.doctrine.orm.query_extension.collection }
