@@ -35,6 +35,10 @@ sylius_shop_partial_manufacturers_index:
         _controller: sylius.controller.manufacturer::indexAction
         _sylius:
             template: "Shop/Manufacturer/_menu.html.twig"
+            repository:
+                method: createByChannelQueryBuilder
+                arguments:
+                    - expr:service('sylius.context.channel').getChannel()
             
 sylius_shop_manufactured_products_index:
     path: /{_locale}/manufactured-products/{code}

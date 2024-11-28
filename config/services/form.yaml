@@ -3,3 +3,10 @@ services:
         class: App\Form\Extension\ProductTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType }
+    app.form.type.brand_type:
+        class: App\Form\Type\ManufacturerType
+        arguments:
+            - '%sylius.model.manufacturer.class%'
+            - ['sylius']
+        tags:
+            - { name: form.type }

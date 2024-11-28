@@ -40,6 +40,7 @@ sylius_resource:
             classes:
                 model: App\Entity\Manufacturer\Manufacturer
                 repository: App\Repository\ManufacturerRepository
+                form: App\Form\Type\ManufacturerType
 
 sylius_grid:
     grids:
@@ -57,6 +58,11 @@ sylius_grid:
                     type: string
                     label: sylius.ui.name
                     sortable: ~
+                channels:
+                    type: twig
+                    label: sylius.ui.channels
+                    options:
+                        template: '@SyliusAdmin/Grid/Field/_channels.html.twig'
             filters:
                 search:
                     type: string

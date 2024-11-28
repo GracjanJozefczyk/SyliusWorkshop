@@ -6,11 +6,12 @@ namespace App\Entity\Manufacturer;
 
 use App\Entity\Product\ProductInterface;
 use Doctrine\Common\Collections\Collection;
+use Sylius\Component\Channel\Model\ChannelsAwareInterface;
 use Sylius\Component\Resource\Model\CodeAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Model\TimestampableInterface;
 
-interface ManufacturerInterface extends ResourceInterface, CodeAwareInterface, TimestampableInterface
+interface ManufacturerInterface extends ResourceInterface, CodeAwareInterface, TimestampableInterface, ChannelsAwareInterface
 {
     public function getName(): ?string;
 
