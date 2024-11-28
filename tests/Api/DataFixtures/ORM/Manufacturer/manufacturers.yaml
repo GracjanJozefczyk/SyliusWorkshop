@@ -31,6 +31,8 @@ App\Entity\Manufacturer\Manufacturer:
     manufacturer_1:
         code: manufacturer_1
         name: Manufacturer 1
+        channels: [ '@channel' ]
     manufacturer_2:
         code: manufacturer_2
         name: Manufacturer 2
+        channels: [ '@channel' ]
