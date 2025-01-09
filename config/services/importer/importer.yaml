@@ -1,0 +1,43 @@
+services:
+    app.importer.taxon:
+        class: App\Importer\TaxonImporter
+        arguments:
+            - '@sylius.import'
+            - '@serializer'
+            - '@app.importer.provider.taxon'
+            - '@app.importer.provider.translation'
+            - '@sylius.manager.taxon'
+    
+    app.importer.product_option:
+        class: App\Importer\ProductOptionImporter
+        arguments:
+            - '@sylius.import'
+            - '@serializer'
+            - '@app.importer.provider.product_option'
+            - '@app.importer.provider.translation'
+            - '@sylius.manager.product_option'
+
+    app.importer.product_attribute:
+        class: App\Importer\ProductAttributeImporter
+        arguments:
+            - '@sylius.import'
+            - '@serializer'
+            - '@app.importer.provider.product_attribute'
+            - '@app.importer.provider.translation'
+            - '@sylius.registry.attribute_type'
+            - '@sylius.manager.product_attribute'
+
+    app.importer.product:
+        class: App\Importer\ProductImporter
+        arguments:
+            - '@sylius.import'
+            - '@serializer'
+            - '@app.importer.provider.product'
+            - '@app.importer.provider.translation'
+            - '@app.importer.provider.product_variant'
+            - '@sylius.manager.product'
+            - '@app.importer.assigner.taxon'
+            - '@app.importer.assigner.channel'
+            - '@app.importer.assigner.image'
+            - '@app.importer.assigner.pricing'
+            - '@app.importer.assigner.option'

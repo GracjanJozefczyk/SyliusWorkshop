@@ -7,3 +7,13 @@ services:
             - '@sylius.manager.manufacturer'
         tags:
             - { name: 'console.command' }
+
+    app.cli.import_command:
+        class: App\Cli\ImportCommand
+        arguments:
+            - '@app.importer.taxon'
+            - '@app.importer.product_option'
+            - '@app.importer.product_attribute'
+            - '@app.importer.product'
+        tags:
+            - { name: 'console.command' }

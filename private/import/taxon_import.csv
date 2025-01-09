@@ -1,0 +1,15 @@
+code,name,description,locale,parent
+B2B_CATEGORY,B2B_Category,B2B category description,en_US,
+B2B_CATEGORY,B2B_Kategoria,Opis kategorii B2B,pl_PL,
+AUTOMOTIVE,Automotive,Automotive description,en_US,B2B_CATEGORY
+AUTOMOTIVE,Motoryzacja,Opis motoryzacji,pl_PL,B2B_CATEGORY
+ELECTRONICS,Electronics,Electronics description,en_US,B2B_CATEGORY
+ELECTRONICS,Elektronika,Opis elektroniki,pl_PL,B2B_CATEGORY
+MOTORCYCLES,Motorcycles,Motorcycles description,en_US,AUTOMOTIVE
+MOTORCYCLES,Motocykle,Opis motocykli,pl_PL,AUTOMOTIVE
+CARS,Cars,Cars description,en_US,AUTOMOTIVE
+CARS,Samochody,Opis samochodów,pl_PL,AUTOMOTIVE
+CAMERAS,Cameras,Cameras description,en_US,ELECTRONICS
+CAMERAS,Aparaty,Opis aparatów,pl_PL,ELECTRONICS
+DIGITAL_CAMERAS,Digital cameras,Digital cameras description,en_US,CAMERAS
+DIGITAL_CAMERAS,Aparaty cyfrowe,Opis aparatów cyfrowych,pl_PL,CAMERAS

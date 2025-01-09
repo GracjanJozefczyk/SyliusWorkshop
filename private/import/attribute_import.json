@@ -1,0 +1,128 @@
+[
+  {
+    "code": "memory",
+    "type": "select",
+    "choices": {
+      "1": {
+        "en_US": "1GB",
+        "pl_PL": "1GB"
+      },
+      "2": {
+        "en_US": "2GB",
+        "pl_PL": "2GB"
+      },
+      "3": {
+        "en_US": "4GB",
+        "pl_PL": "4GB"
+      },
+      "4": {
+        "en_US": "8GB",
+        "pl_PL": "8GB"
+      },
+      "5": {
+        "en_US": "16GB",
+        "pl_PL": "16GB"
+      },
+      "6": {
+        "en_US": "32GB",
+        "pl_PL": "32GB"
+      },
+      "7": {
+        "en_US": "64GB",
+        "pl_PL": "64GB"
+      },
+      "8": {
+        "en_US": "128GB",
+        "pl_PL": "128GB"
+      },
+      "9": {
+        "en_US": "256GB",
+        "pl_PL": "256GB"
+      },
+      "10": {
+        "en_US": "512GB",
+        "pl_PL": "512GB"
+      }
+    },
+    "translations": {
+      "en_US": {
+        "name": "Memory"
+      },
+      "pl_PL": {
+        "name": "Pamięć"
+      }
+    }
+  },
+  {
+    "code": "current",
+    "type": "select",
+    "choices": {
+      "1": {
+        "en_US": "Alternating",
+        "pl_PL": "Zmienne"
+      },
+      "2": {
+        "en_US": "Direct",
+        "pl_PL": "Stałe"
+      }
+    },
+    "translations": {
+      "en_US": {
+        "name": "Current"
+      },
+      "pl_PL": {
+        "name": "Napięcie"
+      }
+    }
+  },
+  {
+    "code": "max_speed",
+    "type": "select",
+    "choices": {
+      "1": {
+        "en_US": "120 mph",
+        "pl_PL": "193 km/h"
+      },
+      "2": {
+        "en_US": "140 mph",
+        "pl_PL": "225 km/h"
+      },
+      "3": {
+        "en_US": "160 mph",
+        "pl_PL": "257 km/h"
+      }
+    },
+    "translations": {
+      "en_US": {
+        "name": "Max speed"
+      },
+      "pl_PL": {
+        "name": "Maksymalna prędkość"
+      }
+    }
+  },
+  {
+    "code": "resolution",
+    "type": "text",
+    "translations": {
+      "en_US": {
+        "name": "Resolution"
+      },
+      "pl_PL": {
+        "name": "Rozdzielczość"
+      }
+    }
+  },
+  {
+    "code": "power",
+    "type": "integer",
+    "translations": {
+      "en_US": {
+        "name": "Power"
+      },
+      "pl_PL": {
+        "name": "Moc"
+      }
+    }
+  }
+]
