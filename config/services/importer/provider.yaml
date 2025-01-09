@@ -1,0 +1,43 @@
+services:
+    app.importer.provider.taxon:
+        class: App\Importer\Provider\ResourceProvider
+        arguments:
+            - '@sylius.repository.taxon'
+            - '@sylius.factory.taxon'
+
+    app.importer.provider.product_option:
+        class: App\Importer\Provider\ResourceProvider
+        arguments:
+            - '@sylius.repository.product_option'
+            - '@sylius.factory.product_option'
+    
+    app.importer.provider.product_attribute:
+        class: App\Importer\Provider\ResourceProvider
+        arguments:
+            - '@sylius.repository.product_attribute'
+            - '@sylius.factory.product_attribute'
+    
+    app.importer.provider.product:
+        class: App\Importer\Provider\ResourceProvider
+        arguments:
+            - '@sylius.repository.product'
+            - '@sylius.factory.product'
+    
+    app.importer.provider.product_variant:
+        class: App\Importer\Provider\ResourceProvider
+        arguments:
+            - '@sylius.repository.product_variant'
+            - '@sylius.factory.product_variant'
+
+    app.importer.provider.product_option_value:
+        class: App\Importer\Provider\ProductOptionValueProvider
+        arguments:
+            - '@sylius.factory.product_option_value'
+
+    app.importer.provider.translation:
+        class: App\Importer\Provider\TranslationProvider
+
+    app.importer.provider.channel_pricing:
+        class: App\Importer\Provider\ChannelPricingProvider
+        arguments:
+            - '@sylius.factory.channel_pricing'

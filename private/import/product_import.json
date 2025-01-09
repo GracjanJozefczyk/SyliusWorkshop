@@ -1,0 +1,144 @@
+[
+  {
+    "code": "nissan-leaf",
+    "enabled": true,
+    "mainTaxon": "AUTOMOTIVE",
+    "taxons": [
+      "AUTOMOTIVE",
+      "CARS"
+    ],
+    "channels": [
+      "b2b",
+      "FASHION_WEB"
+    ],
+    "translations": [
+      {
+        "locale": "en_US",
+        "name": "Nissan Leaf",
+        "slug": "nissan-leaf",
+        "description": "Nissan Leaf is a compact five-door hatchback electric car manufactured by Nissan and introduced in Japan and the United States in December 2010.",
+        "shortDescription": "Nice electric car"
+      },
+      {
+        "locale": "pl_PL",
+        "name": "Nissan Leaf",
+        "slug": "nissan-leaf",
+        "description": "Nissan Leaf to kompaktowy, pięciodrzwiowy hatchback elektryczny produkowany przez Nissana i wprowadzony na rynek japoński i amerykański w grudniu 2010 roku.",
+        "shortDescription": "Fajny samochód elektryczny"
+      }
+    ],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2011_Nissan_Leaf_SL_--_10-28-2011.jpg/1231px-2011_Nissan_Leaf_SL_--_10-28-2011.jpg"
+    ],
+    "variants": [
+      {
+        "code": "nissan-leaf-1",
+        "enabled": true,
+        "stock": 10,
+        "pricing": [
+          {
+            "channel": "b2b",
+            "price": 1000000,
+            "originalPrice": 1100000,
+            "minimumPrice": 0
+          },
+          {
+            "channel": "FASHION_WEB",
+            "price": 1000000,
+            "originalPrice": 1100000,
+            "minimumPrice": 0
+          }
+        ],
+        "options": [
+          {
+            "optionCode": "color",
+            "valueCode": "color_white",
+            "translations": {
+              "en_US": "White",
+              "pl_PL": "Biały"
+            }
+          },
+          {
+            "optionCode": "power",
+            "valueCode": "power_100",
+            "translations": {
+              "en_US": "100 kW",
+              "pl_PL": "136 KM"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "toyota-corolla",
+    "enabled": true,
+    "mainTaxon": "AUTOMOTIVE",
+    "taxons": [
+      "AUTOMOTIVE",
+      "CARS"
+    ],
+    "channels": [
+      "b2b",
+      "FASHION_WEB"
+    ],
+    "translations": [
+      {
+        "locale": "en_US",
+        "name": "Toyota Corolla",
+        "slug": "toyota-corolla",
+        "description": "The Toyota Corolla is a line of subcompact and compact cars manufactured by Toyota.",
+        "shortDescription": "Nice car"
+      },
+      {
+        "locale": "pl_PL",
+        "name": "Toyota Corolla",
+        "slug": "toyota-corolla",
+        "description": "Toyota Corolla to linia samochodów subkompaktowych i kompaktowych produkowanych przez Toyotę.",
+        "shortDescription": "Fajny samochód"
+      }
+    ],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/640px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg"
+    ],
+    "variants": [
+      {
+        "code": "toyota-corolla-1",
+        "enabled": true,
+        "stock": 10,
+        "pricing": [
+          {
+            "channel": "b2b",
+            "price": 1500000,
+            "originalPrice": 1600000,
+            "minimumPrice": 0
+          },
+          {
+            "channel": "FASHION_WEB",
+            "price": 1500000,
+            "originalPrice": 1600000,
+            "minimumPrice": 0
+          }
+        ],
+        "options": [
+          {
+            "optionCode": "color",
+            "valueCode": "color_red",
+            "translations": {
+              "en_US": "Red",
+              "pl_PL": "Czerwony"
+            }
+          },
+          {
+            "optionCode": "power",
+            "valueCode": "power_150",
+            "translations": {
+              "en_US": "150 kW",
+              "pl_PL": "204 KM"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

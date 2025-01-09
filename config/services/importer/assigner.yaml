@@ -1,0 +1,31 @@
+services:
+    app.importer.assigner.channel:
+        class: App\Importer\Assigner\ChannelAssigner
+        arguments:
+            - '@sylius.repository.channel'
+
+    app.importer.assigner.image:
+        class: App\Importer\Assigner\ImageAssigner
+        arguments:
+            - '@Sylius\Component\Core\Filesystem\Adapter\FilesystemAdapterInterface'
+            - '@Psr\Http\Message\RequestFactoryInterface'
+            - '@sylius.http_client'
+            - '@sylius.factory.product_image'
+
+    app.importer.assigner.option:
+        class: App\Importer\Assigner\OptionAssigner
+        arguments:
+            - '@app.importer.provider.product_option'
+            - '@app.importer.provider.product_option_value'
+            - '@app.importer.provider.translation'
+
+    app.importer.assigner.pricing:
+        class: App\Importer\Assigner\PricingAssigner
+        arguments:
+            - '@app.importer.provider.channel_pricing'
+
+    app.importer.assigner.taxon:
+        class: App\Importer\Assigner\TaxonAssigner
+        arguments:
+            - '@app.importer.provider.taxon'
+            - '@sylius.factory.product_taxon'

@@ -1,0 +1,7 @@
+services:
+    app.importer.serializer.product_denormalizer:
+        class: App\Importer\Serializer\ProductDenormalizer
+        arguments:
+            - '@serializer.normalizer.object'
+        tags:
+            - { name: 'serializer.normalizer', priority: 10 }
